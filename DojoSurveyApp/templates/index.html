@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dojo Survey</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+  </head>
+  
+  <body>
+    <div class= "container border my-4 w-25">
+      <div class="row">
+          <h1>Please Sign in Here</h1>
+      </div>
+      <div class="row">
+        <form action="/result" method="POST">
+              {% csrf_token %}
+        <div class= "form-group-row">
+            <label for="yourname" class="col-sm-10"> Your Name: </label>
+            <input type= "text" class="form-control-lg col-sm-10" name="yourname">
+        </div>
+        <div class= "form-group-row">
+            <label for="location" class="col-sm-10"> Dojo Location: </label>
+            <select name="location" class="col-sm-10 form-control-lg">
+              <option value="Burbank">Burbank</option>
+              <option value="Orange County">Orange County</option>
+              <option value="Boise">Boise</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Dallas">Dallas</option>
+              <option value="Arlington">Arlington</option>
+              <option value="Oakland">Oakland</option>
+              <option value="San Jose">San Jose</option>
+              <option value="Seattle">Seattle</option>
+              <option value="Tulsa">Tulsa</option>
+              <option value="Online">Online</option>
+            </select>
+          </div>
+         <div class= "form-group-row">
+            <label for="language" class="col-sm-10"> Favorite Language: 
+            </label>
+        </div>
+        <div class="col-10">
+            <select name="language" class="col-sm-10 form-control-lg">
+              <option value="Python">Python</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="MERN">MERN</option>
+              <option value="IOS">IOS</option>
+            </select>
+          </div>
+        </div>
+      <div class="form-group row">
+              <input type="submit" class="form-control-lg my-10 col-4" value="Submit">
+      </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
